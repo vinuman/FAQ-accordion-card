@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to bottom,#B068E9, #6463E7);
+}
+
+.container{
+    display: flex;
+   
+    width:70%;
+    min-height: 7rem;
+    padding-top: 5rem;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 2.3rem;
+}
+
+.container > .left{
+   position: relative;
+    width:50%;
+   
+}
+.container > .left >.main-image{
+   
+   min-height: 30rem;
+    max-width: 47.2rem;
+    margin-left: -5rem;
+    margin-bottom: 2rem;
+    
+}
+
+.container > .left > .box{
+   position: absolute;
+   top:160px;
+   left:-70px;
+}
+
+.container > .right{
+    width:40%
+}
+
+.container > .right > h1{
+    font-size: 3.2rem;
+    
+    margin-bottom: 4rem;
+    
+}
+.container > .right > h2{
+    font-size: 1.4rem;
+    border-bottom: 1px solid black;
+   
+   
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.qna{
+    border-bottom: 1px solid lightgray;
+}
+
+.qna > .answer{
+    padding-bottom: 2rem;
+    display: none;
+    transition: 0.5s;
+    overflow-y: auto;
+    font-size: 1.6rem;
+    opacity: 0.5;
+}
+
+
+.material-symbols-outlined{
+    cursor: pointer;
+}
+
+.qna > .answer{
+  padding-bottom: 2rem;
+  display: none;
+  transition: 0.5s;
+  overflow-y: auto;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.qna .question.active .material-symbols-outlined{
+  transform: rotate(180deg);
+}
+
+.qna .answer.show{
+  display: block;
+  opacity: 0.5;
+}
+
+
+@media screen and (max-width:1237px){
+    body{
+        position: relative;
+    }
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        align-items: center;
+        width: 90%;
+        min-height: 60rem;
+        overflow-y: scroll;
+    }
+    
+    .container > .left{
+       position: absolute;
+       /*  width:100%; */
+        width:100%;
+        
+        display: flex;
+        justify-content: center;
+        top:4%;
+        min-height: 10rem;
+        
+        
+    }
+    .container > .left >.main-image{
+       margin-left: 0.5rem;
+        min-height: 10rem;
+        width:50%;
+       
+    }
+    
+    .container > .left > .box{
+      display: none;
+    }
+    
+    .container > .right{
+        width:90%;
+       
+        margin-top: 10%;
+        z-index: 1000;
+    }
+    
+    .container > .right > h1{
+        font-size: 2.2rem;
+        
+        margin-bottom: 4rem;
+        
+    }
+    .container > .right > h2{
+        font-size: 1.4rem;
+        border-bottom: 1px solid black;
+       
+       
+    }
+}
+
+  
+  
